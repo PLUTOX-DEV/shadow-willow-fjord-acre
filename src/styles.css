@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #041525;
+  --color-bg-deep: #020d18;
+  --color-surface: #0a223b;
+  --color-surface-2: #0d2b4a;
+  --color-fg: #f3f7fb;
+  --color-muted: #8aa3bb;
+  --color-primary: #2b8fff;
+  --color-primary-fg: #041428;
+  --color-cyan: #5ee7ff;
+  --color-border: #1c4a72;
+  --color-success: #3dd68c;
+  --color-danger: #ff6b7a;
+  --color-gold: #e8c36a;
+  --color-live: #22d67a;
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", "Oswald", ui-sans-serif, sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius: 18px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.35rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.4rem;
+  --text-4xl: 3.4rem;
+  --text-5xl: 4.6rem;
+
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--color-primary) 28%, transparent),
+    0 18px 50px -24px rgb(8 40 80 / 0.8);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg-deep);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(1200px 600px at 80% -10%, rgb(20 80 140 / 0.28), transparent 55%),
+      radial-gradient(900px 500px at 0% 20%, rgb(8 50 90 / 0.35), transparent 50%);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 40%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@layer components {
+  .glass {
+    background: color-mix(in oklab, var(--color-surface) 78%, transparent);
+    border: 1px solid color-mix(in oklab, var(--color-cyan) 16%, var(--color-border));
+    box-shadow: var(--shadow-glow);
+    backdrop-filter: blur(18px);
+  }
+
+  .display {
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+  }
+
+  .script {
+    font-family: var(--font-script);
+  }
+
+  .hairline {
+    border-color: color-mix(in oklab, var(--color-cyan) 18%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Wallet adapter modal — match the ocean theme */
+.wallet-adapter-modal-wrapper {
+  background: rgb(2 10 20 / 0.72) !important;
+  backdrop-filter: blur(10px);
+}
+.wallet-adapter-modal {
+  background: var(--color-surface) !important;
+  color: var(--color-fg) !important;
+  border: 1px solid var(--color-border) !important;
+  font-family: var(--font-sans) !important;
+}
+.wallet-adapter-modal-title,
+.wallet-adapter-modal-list-more {
+  color: var(--color-fg) !important;
+}
+.wallet-adapter-button {
+  background: var(--color-primary) !important;
+  color: var(--color-primary-fg) !important;
+}
+.wallet-adapter-modal-list .wallet-adapter-button {
+  background: var(--color-surface-2) !important;
+  color: var(--color-fg) !important;
+}

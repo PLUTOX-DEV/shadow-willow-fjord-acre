@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ONE LOVE — COMMUNITY • FREEDOM • ADVENTURE",
+      "hasCanvas": false,
+      "bodyTextLen": 2316,
+      "bodyTextHash": "adea88e2205fe3a3f2c36fc0b2aaea486a9be3b080ef47bf952c329cce503d0c",
+      "bodyTextPrefix": "ONE LOVE Overview Chart Staking Game Sailing Community Connect W",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ONE LOVE — COMMUNITY • FREEDOM • ADVENTURE",
+      "hasCanvas": false,
+      "bodyTextLen": 2265,
+      "bodyTextHash": "cff5cdc81db97fe327534fc3ae51a14475630e6f1a680bab0a82317567cc5b92",
+      "bodyTextPrefix": "ONE LOVE Connect Wallet One Love Sailing ONE LOVE COMMUNITY • FR",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

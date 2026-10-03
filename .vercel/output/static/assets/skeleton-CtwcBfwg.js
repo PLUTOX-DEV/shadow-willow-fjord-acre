@@ -1,0 +1,1 @@
+import{a as e,m as t}from"./button-DDLjb2QD.js";var n=t();function r({className:t,...r}){return(0,n.jsx)(`div`,{className:e(`animate-pulse rounded-md bg-surface-2`,t),...r})}export{r as t};
